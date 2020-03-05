@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/9 | blaoke&#39;blog</title>
+  <title>hexo主题美化 | blaoke&#39;blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="blaoke&#39;blog">
-<meta property="og:url" content="http://yoursite.com/archives/2019/09/index.html">
+  <meta name="description" content="美化主题 右下角添加小人  首先在命令行输入 npm install --save hexo-helper-live2d  然后在命令行输入 npm install live2d-widget-model-XXX,其中XXX为模型名称，可以在模型网站 查看，例如输入cnpm install live2d-widget-model-miku">
+<meta name="keywords" content="主题  美化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo主题美化">
+<meta property="og:url" content="http://yoursite.com/2020/01/05/hexo主题美化/index.html">
 <meta property="og:site_name" content="blaoke&#39;blog">
+<meta property="og:description" content="美化主题 右下角添加小人  首先在命令行输入 npm install --save hexo-helper-live2d  然后在命令行输入 npm install live2d-widget-model-XXX,其中XXX为模型名称，可以在模型网站 查看，例如输入cnpm install live2d-widget-model-miku">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-03-05T10:33:04.291Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="blaoke&#39;blog">
+<meta name="twitter:title" content="hexo主题美化">
+<meta name="twitter:description" content="美化主题 右下角添加小人  首先在命令行输入 npm install --save hexo-helper-live2d  然后在命令行输入 npm install live2d-widget-model-XXX,其中XXX为模型名称，可以在模型网站 查看，例如输入cnpm install live2d-widget-model-miku">
   
     <link rel="alternative" href="/atom.xml" title="blaoke&#39;blog" type="application/atom+xml">
   
@@ -146,49 +151,226 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-hexo主题美化" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/07/hello-world/" class="archive-article-date">
-  	<time datetime="2019-09-07T08:26:39.414Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/07/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      hexo主题美化
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2020/01/05/hexo主题美化/" class="archive-article-date">
+  	<time datetime="2020-01-05T10:15:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="美化主题"><a href="#美化主题" class="headerlink" title="美化主题"></a>美化主题</h2><ol>
+<li><p>右下角添加小人</p>
+<ul>
+<li><p>首先在命令行输入 <code>npm install --save hexo-helper-live2d</code></p>
+</li>
+<li><p>然后在命令行输入 <code>npm install live2d-widget-model-XXX</code>,其中<code>XXX</code>为模型名称，可以在<a href="https://github.com/dongshuyan/live2dDemo" target="_blank" rel="noopener">模型网站</a> 查看，例如输入<code>cnpm install live2d-widget-model-miku</code></p>
+<a id="more"></a>
+</li>
+<li><p>在<code>_config.yml</code> 文件添加配置 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw/</span><br><span class="line">  pluginJsPath: lib/</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  tagMode: false</span><br><span class="line">  debug: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-miku</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>之后就可以在博客中浏览了</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>点击显示小红心</p>
+<ul>
+<li><p>首先打开 打开 <code>hexo/themes/yilia/source 文件夹</code>，在其中新建<code>love.js</code>文件，在文件中添加</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!function(e,t,a)&#123;function r()&#123;for(var e=0;e&lt;s.length;e++)s[e].alpha&lt;=0?(t.body.removeChild(s[e].el),s.splice(e,1)):(s[e].y--,s[e].scale+=.004,s[e].alpha-=.013,s[e].el.style.cssText="left:"+s[e].x+"px;top:"+s[e].y+"px;opacity:"+s[e].alpha+";transform:scale("+s[e].scale+","+s[e].scale+") rotate(45deg);background:"+s[e].color+";z-index:99999");requestAnimationFrame(r)&#125;function n()&#123;var t="function"==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e)&#123;t&amp;&amp;t(),o(e)&#125;&#125;function o(e)&#123;var a=t.createElement("div");a.className="heart",s.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:c()&#125;),t.body.appendChild(a)&#125;function i(e)&#123;var a=t.createElement("style");a.type="text/css";try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName("head")[0].appendChild(a)&#125;function c()&#123;return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"&#125;var s=[];e.requestAnimationFrame=e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3/60)&#125;,i(".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"),n(),r()&#125;(window,document);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>其次在<code>hexo/themes/yilia/layout/_partial/footer.ejs</code>中添加<code>&lt;!--页面点击小红心--&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;/love.js&quot;&gt;&lt;/script&gt;</code></li>
+</ul>
+<ol start="3">
+<li><p>解决左边所有文章不显示</p>
+<ul>
+<li><p>在博客根目录执行命令 <code>cnpm i hexo-generator-json-content --save</code></p>
+</li>
+<li><p>在根目录_config.yml里添加配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:</span><br><span class="line">    meta: false</span><br><span class="line">    pages: false</span><br><span class="line">    posts:</span><br><span class="line">      title: true</span><br><span class="line">      date: true</span><br><span class="line">      path: true</span><br><span class="line">      text: false</span><br><span class="line">      raw: false</span><br><span class="line">      content: false</span><br><span class="line">      slug: false</span><br><span class="line">      updated: false</span><br><span class="line">      comments: false</span><br><span class="line">      link: false</span><br><span class="line">      permalink: false</span><br><span class="line">      excerpt: false</span><br><span class="line">      categories: false</span><br><span class="line">      tags: true</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>添加图片</p>
+<ul>
+<li>首先在<code>themes/yilia/source/</code>下面新建<code>assets</code>文件夹，然后在其中放入需要添加的图片</li>
+<li>打开<code>yilia/_config.yml</code>文件，在需要添加图片的位置后面输入<code>/assets/XXX.jpg</code>即可</li>
+</ul>
+</li>
+<li><p>取消全文显示</p>
+<ul>
+<li>之编辑的md文件中，在需要显示下面换行输入 <code>&lt;!--more--&gt;</code></li>
+<li>注释掉<code>themes/yilia/_config.yml</code>下的<code>excerpt_link:more</code></li>
+</ul>
+</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你的阅读，mua~<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">主题  美化</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/05/hexo主题美化/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/01/05/hexo博客搭建/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          hexo博客搭建
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2019/09/07/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -215,8 +397,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
